@@ -1,0 +1,76 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	background-color: #3b3f45;
+	color: #ffffff;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	border: 20px solid #ffffff;
+	min-height: 100vh;
+	/* box-sizing: позволяет определить как расчитываются размеры; content-box;*/
+}
+header, footer{
+	background-color: #4a4f56;
+	text-align: center;
+	/* margin: 0; */
+	padding: 10px;
+	color: #eb7e7f;
+	font-size: 24px;
+}
+h1{
+	margin: 0 0 10px 0;
+	font-size: 42px;
+	
+}
+/* схлопывание отступов */
+.container{
+	margin: 0 auto;
+	/* padding: 15px; */
+	max-width: 800px;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+ul li{
+	background-color: #88839e;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+}
+ul li:nth-child(odd){
+	background-color: #727593;
+}
+ul li:hover{
+	background-color: #625e77;
+	transition: all .3s ease-in;
+	border-color:#ffffff;
+}
+ul li:active,
+ul li:focus{
+	background-color: #eb7e7f;
+}
+label{
+	padding: 10px;
+	display: block;
+	/* строчный элемент, нужно display: inline-block;
+	display: block; */
+	/* inline-block гибрид block */
+}
+input[type=checkbox]{
+	margin-right: 10px;
+	transform: scale(1.4);
+}
+input[type=checkbox]:checked + *{
+	text-decoration: line-through;
+	
+}
+small{
+	opacity: 0.6;
+}
+small:not(:empty)::before{
+	content:' (';
+}
+small:not(:empty)::after{
+	content: ')';
+}
